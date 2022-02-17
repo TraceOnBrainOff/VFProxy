@@ -9,4 +9,4 @@ if __name__ == "__main__":
     args=parser.parse_args()
     argv = vars(args)
     proxy = VFProxy()
-    proxy.download_file(argv["voice_name"], argv["text"], argv["encode"])
+    proxy.download_file("Jerkface", "test", encode=True)

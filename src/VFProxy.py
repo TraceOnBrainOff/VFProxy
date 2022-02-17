@@ -22,5 +22,5 @@ class VFProxy():
         r = requests.get(url)
         open("./outputs/{0}.wav".format(file_name), 'wb').write(r.content)
         if encode:
-            os.system("cd pwd && lame -q0 -b128 --resample 16 ./outputs/{0} ./outputs_mp3/{1}".format(file_name+'.wav', file_name+'.mp3'))
+            os.system("lame -q0 -b128 --resample 16 \"./outputs/{0}\" \"./outputs_mp3/{1}\"".format(file_name+'.wav', file_name+'.mp3'))
             return "./outputs/{0}".format(file_name+'.wav'), "./outputs_mp3/{0}".format(file_name+'.mp3')
