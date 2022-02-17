@@ -12,4 +12,4 @@ if __name__ == "__main__":
     print(argv['voice_name'])
     print(argv['text'])
     print(argv['encode'])
-    proxy.download_file(argv['voice_name'], argv['text'], encode=argv['encode']==1)
+    proxy.download_file(argv['voice_name'], argv['text'], encode=argv['encode']>0)
